@@ -1,0 +1,19 @@
+rand() library is #include <cstdlib>
+    add #include<ctime> for completely random
+
+cplusplus.com is good recourse
+
+git clone https://github.com/johndoe/my-cpp-project.git
+cd my-cpp-project
+g++ hello.cpp -o hello
+./hello
+
+should start code with:
+include<iostream>
+
+using namespace std;
+
+int main(){
+    //all code stuff
+    return 0;
+}

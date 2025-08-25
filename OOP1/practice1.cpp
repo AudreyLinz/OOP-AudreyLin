@@ -23,14 +23,3 @@ int main(){
 //cout << (10.5 + 2 * 3) / (45 - 3.5) << endl;
 return 0;
 }
-
-//notes
-/*
-cplusplus.com is good recourse
-
-git clone https://github.com/johndoe/my-cpp-project.git
-cd my-cpp-project
-g++ hello.cpp -o hello
-./hello
-
-*/
