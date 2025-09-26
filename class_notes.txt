@@ -5,11 +5,12 @@ cplusplus.com is good recourse
 
 git clone https://github.com/johndoe/my-cpp-project.git
 cd my-cpp-project
-g++ hello.cpp -o hello
-./hello
+
+g++ hello.cpp
+./a.out
 
 should start code with:
-include<iostream>
+#include<iostream>
 
 using namespace std;
 
@@ -17,3 +18,10 @@ int main(){
     //all code stuff
     return 0;
 }
+
+ceil(x) x will round up to the nearest integer
+floor(x) x will round down to the nearest integer
+
+max(2,3) returns 3
+min(2, 3) returns 2
+abs(-2) returns 2
