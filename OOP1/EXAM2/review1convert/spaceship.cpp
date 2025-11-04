@@ -1,26 +1,20 @@
+#include "callsSpace.h"
 #include <iostream>
-#include <string>
 #include <sstream>
+#include <string>
 
 using namespace std;
 
-class Spaceship {
-private:
-    int x;
-    int y;
-    string position;
-
-    void setPosition(const string& direction){
+void Spaceship::setPosition(const string& direction){
         stringstream ss;
         ss << "x: " << x << ", y: " << y << ", direction: " << direction;
         position = ss.str();
     }
-public:
-    Spaceship() : x(0), y(0) {
-        setPosition("up");
-    }
+Spaceship::Spaceship(): x(0), y(0){
+    setPosition("up");
+}
 
-    Spaceship(const string& path) : x(0), y(0) {
+Spaceship::Spaceship(const string& path) : x(0), y(0) {
         string direction = "up";
         for (char move : path){
             if(move == 'A'){
@@ -43,25 +37,6 @@ public:
         setPosition(direction);
     }
 
-    string getPosition() const{
+    string Spaceship::getPosition() const{
         return position;
     }
-};
-
-int main(void){
-    Spaceship astrochuckler;
-    cout << astrochuckler.getPosition() << endl; // {x: 0, y: 0, direction: 'up'}
-
-    Spaceship lunacycle("RAALALL");
-    cout << lunacycle.getPosition() << endl; // {x: 2, y: -1, direction: 'down'}
-
-    Spaceship quirkonaut("AAAARAARLAAAARAAARRAAAALLLA");
-    cout << quirkonaut.getPosition() << endl; // {x: 7, y: -5, direction: 'right'}
-
-    Spaceship zanyverse("");
-    cout << zanyverse.getPosition() << endl; // {x: 0, y: 0, direction: 'up'}
-
-    Spaceship cosmocomedy("LAAA");
-    cout << cosmocomedy.getPosition() << endl; // {x: -3, y: 0, direction: 'left'}
-    return 0;
-}
